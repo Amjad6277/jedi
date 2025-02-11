@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jedi Cat: Meme Rebellion</title>
+    <!-- Jedi Fonts + Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Jedi Theme: Black + Gold/Green */
+        body {
+            background: #000;
+            color: #FFD700; /* Gold */
+            font-family: 'Comic Neue', cursive;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #32CD32; /* Jedi Green */
+            text-align: center;
+            text-shadow: 0 0 10px #32CD32;
+        }
+        .meme-generator {
+            border: 3px solid #32CD32;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        #memeCanvas {
+            background: #111;
+            border: 2px dashed #FFD700;
+        }
+        button {
+            background: #32CD32;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-family: 'Orbitron', sans-serif;
+            cursor: pointer;
+        }
+        .meme-feed {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+        .meme-feed img {
+            width: 100%;
+            border: 2px solid #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 JEDI CAT MEME REBELLION 🌟</h1>
+    
+    <!-- Meme Generator Section -->
+    <div class="meme-generator">
+        <canvas id="memeCanvas" width="600" height="400"></canvas>
+        <br>
+        <button onclick="generateRandomMeme()">GENERATE RANDOM JEDI MEME</button>
+        <button onclick="downloadMeme()">DOWNLOAD</button>
+    </div>
+
+    <!-- Live Meme Feed Section -->
+    <h2>LIVE MEME FEED 🔥</h2>
+    <div class="meme-feed" id="memeFeed"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
